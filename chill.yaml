@@ -5,6 +5,6 @@ service:
     # Here you can add clients for code generation
   dependencies:
     # Here you can add other services as dependencies
-    # dummyService:
+    # dummy-service:
     #  remote: github.com/chill-cloud/dummy-service
     #  version: v1
