@@ -1,0 +1,10 @@
+service:
+  name: {{.ServiceName}}
+  integration: {{.IntegrationName}}
+  clients:
+    # Here you can add clients for code generation
+  dependencies:
+    # Here you can add other services as dependencies
+    # dummyService:
+    #  remote: github.com/chill-cloud/dummy-service
+    #  version: v1
