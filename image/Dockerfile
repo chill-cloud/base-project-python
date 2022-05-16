@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM dart:2.17
+FROM python:3
 
 WORKDIR /app
 
@@ -7,9 +7,8 @@ COPY ./src ./src
 
 WORKDIR /app/src
 
-RUN dart pub get
-RUN dart compile exe bin/main.dart -o /app/exec
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 80
 
-CMD [ "/app/exec" ]
+CMD [ "python", "main.py" ]

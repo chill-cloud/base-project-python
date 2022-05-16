@@ -1,4 +1,4 @@
-# Chill example project for Dart
+# Chill example project for Python
 
 Some steps for you to write code with this template:
 
