@@ -1,6 +1,15 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:20.04
-COPY ./src /app
+FROM golang:1.16-alpine
+
+WORKDIR /app
+
+COPY ./src ./src
+
+WORKDIR /app/src
+
+RUN go mod download
+RUN go build -o /app/exec ./cmd
+
 EXPOSE 80
-CMD echo "Remove this line, and change the line below to an actual command"
-# CMD run /app/some_app_bin
+
+CMD [ "/app/exec" ]
