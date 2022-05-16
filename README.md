@@ -1,4 +1,4 @@
-# Chill example project for Go
+# Chill example project for Dart
 
 Some steps for you to write code with this template:
 

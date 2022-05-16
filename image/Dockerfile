@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM golang:1.16-alpine
+FROM dart:2.17
 
 WORKDIR /app
 
@@ -7,8 +7,8 @@ COPY ./src ./src
 
 WORKDIR /app/src
 
-RUN go mod download
-RUN go build -o /app/exec ./cmd
+RUN dart pub get
+RUN dart compile exe bin/main.dart -o /app/exec
 
 EXPOSE 80
 
